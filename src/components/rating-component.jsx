@@ -18,13 +18,15 @@ const NumBtnsDiv = styled.div`
   display: flex;
   justify-content: space-around;
 `;
-
-const SubmitButton = styled.button`
-  background-color: red;
-`;
+const NumBtn = styled.button`
+  background-color: orange;
+`
 const SubmitDiv = styled.div`
   display: flex;
   justify-content: center;
+`;
+const SubmitButton = styled.button`
+  background-color: red;
 `;
 
 const RatingComponent = () => {
@@ -70,11 +72,11 @@ const RatingComponent = () => {
           is appreciated to help us improve our affering!
         </Text>
         <NumBtnsDiv onSubmit={handleSubmit}>
-          <button onClick={clickBtn1}>1</button>
-          <button onClick={clickBtn2}>2</button>
-          <button onClick={clickBtn3}>3</button>
-          <button onClick={clickBtn4}>4</button>
-          <button onClick={clickBtn5}>5</button>
+          <NumBtn onClick={clickBtn1}>1</NumBtn>
+          <NumBtn onClick={clickBtn2}>2</NumBtn>
+          <NumBtn onClick={clickBtn3}>3</NumBtn>
+          <NumBtn onClick={clickBtn4}>4</NumBtn>
+          <NumBtn onClick={clickBtn5}>5</NumBtn>
         </NumBtnsDiv>
         <SubmitDiv>
           <SubmitButton type="submit">SUBMIT</SubmitButton>
