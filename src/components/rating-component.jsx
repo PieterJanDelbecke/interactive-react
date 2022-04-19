@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: grey;
+  background-color:grey;
   border: 1px solid red;
   width: 360px;
   margin: 50px 0px;
@@ -12,6 +12,7 @@ const Title = styled.h2`
   color: white;
 `;
 const Text = styled.p`
+  font-size: 15px;
   color: white;
 `;
 const NumBtnsDiv = styled.div`
@@ -19,8 +20,8 @@ const NumBtnsDiv = styled.div`
   justify-content: space-around;
 `;
 const NumBtn = styled.button`
-  color: white;
-  background-color: darkgrey;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 19%, 18%);
   width: 45px;
   height: 45px;
   border-radius: 50%;
