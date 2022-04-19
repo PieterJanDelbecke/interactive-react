@@ -6,6 +6,13 @@ const Container = styled.div`
     border: 1px solid red;    
     width: 360px;
     margin: 50px 0px;
+    padding:20px;
+`
+const Title = styled.h2`
+  color:white;
+`
+const Text = styled.p`
+  color:white;
 `
 
 const RatingComponent = () => {
@@ -47,11 +54,11 @@ const RatingComponent = () => {
   return (
     <>
     <Container>
-      <h1>How did we do?</h1>
-      <p>
+      <Title>How did we do?</Title>
+      <Text>
         Please let is know how we did with your support request. All feedback is
         appreciated to help us improve our affering!
-      </p>
+      </Text>
       <div onSubmit={handleSubmit}>
         <button onClick={clickBtn1}>1</button>
         <button onClick={clickBtn2}>2</button>
