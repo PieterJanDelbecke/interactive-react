@@ -1,12 +1,17 @@
-import RatingComponent from "./rating-component"
+import RatingComponent from "./rating-component";
+import styled from "styled-components";
+
+const MainDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const Page = () => {
-    return (
-        <>
-        <h1> Main Page</h1>
-        <RatingComponent />
-        </>
-    )
-}
+  return (
+    <MainDiv>
+      <RatingComponent />
+    </MainDiv>
+  );
+};
 
-export default Page
+export default Page;

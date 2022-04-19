@@ -1,4 +1,12 @@
 import { useState } from "react";
+import styled from "styled-components"
+
+const Container = styled.div`
+    background-color: grey;
+    border: 1px solid red;    
+    width: 360px;
+    margin: 50px 0px;
+`
 
 const RatingComponent = () => {
   const [btn1, setBtn1] = useState(false);
@@ -38,6 +46,7 @@ const RatingComponent = () => {
   }
   return (
     <>
+    <Container>
       <h1>How did we do?</h1>
       <p>
         Please let is know how we did with your support request. All feedback is
@@ -51,6 +60,7 @@ const RatingComponent = () => {
         <button onClick={clickBtn5}>5</button>
       </div>
       <button type="submit">SUBMIT</button>
+    </Container>
     </>
   );
 };
