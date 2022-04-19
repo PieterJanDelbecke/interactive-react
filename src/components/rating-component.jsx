@@ -1,19 +1,31 @@
 import { useState } from "react";
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Container = styled.div`
-    background-color: grey;
-    border: 1px solid red;    
-    width: 360px;
-    margin: 50px 0px;
-    padding:20px;
-`
+  background-color: grey;
+  border: 1px solid red;
+  width: 360px;
+  margin: 50px 0px;
+  padding: 20px;
+`;
 const Title = styled.h2`
-  color:white;
-`
+  color: white;
+`;
 const Text = styled.p`
-  color:white;
-`
+  color: white;
+`;
+const NumBtnsDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const SubmitButton = styled.button`
+  background-color: red;
+`;
+const SubmitDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const RatingComponent = () => {
   const [btn1, setBtn1] = useState(false);
@@ -24,50 +36,50 @@ const RatingComponent = () => {
 
   const clickBtn1 = () => {
     const stateBtn = btn1 === true ? false : true;
-    console.log("Btn1: ",stateBtn);
+    console.log("Btn1: ", stateBtn);
     setBtn1(stateBtn);
   };
   const clickBtn2 = () => {
     const stateBtn = btn2 === true ? false : true;
-    console.log("Btn2: ",stateBtn);
+    console.log("Btn2: ", stateBtn);
     setBtn2(stateBtn);
   };
   const clickBtn3 = () => {
     const stateBtn = btn3 === true ? false : true;
-    console.log("Btn3: ",stateBtn);
+    console.log("Btn3: ", stateBtn);
     setBtn3(stateBtn);
   };
   const clickBtn4 = () => {
     const stateBtn = btn4 === true ? false : true;
-    console.log("Btn4: ",stateBtn);
+    console.log("Btn4: ", stateBtn);
     setBtn4(stateBtn);
   };
   const clickBtn5 = () => {
     const stateBtn = btn5 === true ? false : true;
-    console.log("Btn5: ",stateBtn);
+    console.log("Btn5: ", stateBtn);
     setBtn5(stateBtn);
   };
 
-  const handleSubmit = ()=> {
-
-  }
+  const handleSubmit = () => {};
   return (
     <>
-    <Container>
-      <Title>How did we do?</Title>
-      <Text>
-        Please let is know how we did with your support request. All feedback is
-        appreciated to help us improve our affering!
-      </Text>
-      <div onSubmit={handleSubmit}>
-        <button onClick={clickBtn1}>1</button>
-        <button onClick={clickBtn2}>2</button>
-        <button onClick={clickBtn3}>3</button>
-        <button onClick={clickBtn4}>4</button>
-        <button onClick={clickBtn5}>5</button>
-      </div>
-      <button type="submit">SUBMIT</button>
-    </Container>
+      <Container>
+        <Title>How did we do?</Title>
+        <Text>
+          Please let is know how we did with your support request. All feedback
+          is appreciated to help us improve our affering!
+        </Text>
+        <NumBtnsDiv onSubmit={handleSubmit}>
+          <button onClick={clickBtn1}>1</button>
+          <button onClick={clickBtn2}>2</button>
+          <button onClick={clickBtn3}>3</button>
+          <button onClick={clickBtn4}>4</button>
+          <button onClick={clickBtn5}>5</button>
+        </NumBtnsDiv>
+        <SubmitDiv>
+          <SubmitButton type="submit">SUBMIT</SubmitButton>
+        </SubmitDiv>
+      </Container>
     </>
   );
 };
