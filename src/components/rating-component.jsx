@@ -25,9 +25,10 @@ const NumBtn = styled.button`
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border-style: solid;
+  border-style: none;
 
-  :hover{
+  :hover {
+    transition:0.25s;
     background-color: hsl(25, 97%, 53%);
   }
 `;
@@ -36,8 +37,18 @@ const SubmitDiv = styled.div`
   justify-content: center;
 `;
 const SubmitButton = styled.button`
-  margin: 10px;
-  background-color: red;
+  color: white;
+  border-style: none;
+  margin: 25px;
+  background-color: hsl(25, 97%, 53%);
+  height: 40px;
+  width: 90%;
+  border-radius: 18px;
+  :hover{
+    transition:0.25s;
+    color: hsl(25, 97%, 53%);
+    background-color:white;
+  }
 `;
 
 const RatingComponent = () => {
