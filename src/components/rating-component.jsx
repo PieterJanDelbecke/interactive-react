@@ -19,13 +19,23 @@ const NumBtnsDiv = styled.div`
   justify-content: space-around;
 `;
 const NumBtn = styled.button`
-  background-color: orange;
-`
+  color: white;
+  background-color: darkgrey;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border-style: solid;
+
+  :hover{
+    background-color: hsl(25, 97%, 53%);
+  }
+`;
 const SubmitDiv = styled.div`
   display: flex;
   justify-content: center;
 `;
 const SubmitButton = styled.button`
+  margin: 10px;
   background-color: red;
 `;
 
