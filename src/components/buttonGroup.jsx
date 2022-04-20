@@ -4,7 +4,7 @@ import styled from "styled-components";
 import AppContext from "../context/AppContext";
 
 const ButtonGroup = ({ buttons }) => {
-  const {clickedIdContext, setClickedIdContext} =useContext(AppContext)
+  const {context, setContext} =useContext(AppContext)
 
   const NumBtnsDiv = styled.div`
     display: flex;
@@ -30,8 +30,8 @@ const ButtonGroup = ({ buttons }) => {
           <NumBtn
             key={i}
             name={buttonLabel}
-            onClick={() => setClickedIdContext(i)}
-            active={i === clickedIdContext ? true : false}
+            onClick={() => setContext({...context, activeBtn: i})}
+            active={i === context.activeBtn ? true : false}
           >
             {buttonLabel}
           </NumBtn>

@@ -5,11 +5,13 @@ import AppContext from "./context/AppContext";
 import Page from "./components/page";
 
 function App() {
-  const [clickedIdContext, setClickedIdContext] = useState(-1);
-  
+  const [context, setContext] = useState({
+    activeBtn: -1
+  });
+
   return (
     <>
-      <AppContext.Provider value={{ clickedIdContext, setClickedIdContext }}>
+      <AppContext.Provider value={{ context, setContext }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Page />} />
