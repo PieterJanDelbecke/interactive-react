@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+import ButtonGroup from "./buttonGroup";
+
 const Container = styled.div`
   background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
   border: 1px solid red;
@@ -59,29 +61,39 @@ const RatingComponent = () => {
   const [btn5, setBtn5] = useState(false);
 
   const clickBtn1 = () => {
-    const stateBtn = btn1 === true ? false : true;
-    console.log("Btn1: ", stateBtn);
-    setBtn1(stateBtn);
+    setBtn1(true);
+    setBtn2(false)
+    setBtn3(false)
+    setBtn4(false)
+    setBtn5(false)
   };
   const clickBtn2 = () => {
-    const stateBtn = btn2 === true ? false : true;
-    console.log("Btn2: ", stateBtn);
-    setBtn2(stateBtn);
+    setBtn1(false);
+    setBtn2(true)
+    setBtn3(false)
+    setBtn4(false)
+    setBtn5(false)
   };
   const clickBtn3 = () => {
-    const stateBtn = btn3 === true ? false : true;
-    console.log("Btn3: ", stateBtn);
-    setBtn3(stateBtn);
+    setBtn1(false);
+    setBtn2(false)
+    setBtn3(true)
+    setBtn4(false)
+    setBtn5(false)
   };
   const clickBtn4 = () => {
-    const stateBtn = btn4 === true ? false : true;
-    console.log("Btn4: ", stateBtn);
-    setBtn4(stateBtn);
+    setBtn1(false);
+    setBtn2(false)
+    setBtn3(false)
+    setBtn4(true)
+    setBtn5(false)
   };
   const clickBtn5 = () => {
-    const stateBtn = btn5 === true ? false : true;
-    console.log("Btn5: ", stateBtn);
-    setBtn5(stateBtn);
+    setBtn1(false);
+    setBtn2(false)
+    setBtn3(false)
+    setBtn4(false)
+    setBtn5(true)
   };
 
   const handleSubmit = () => {};
@@ -93,13 +105,7 @@ const RatingComponent = () => {
           Please let is know how we did with your support request. All feedback
           is appreciated to help us improve our affering!
         </Text>
-        <NumBtnsDiv onSubmit={handleSubmit}>
-          <NumBtn onClick={clickBtn1}>1</NumBtn>
-          <NumBtn onClick={clickBtn2}>2</NumBtn>
-          <NumBtn onClick={clickBtn3}>3</NumBtn>
-          <NumBtn onClick={clickBtn4}>4</NumBtn>
-          <NumBtn onClick={clickBtn5}>5</NumBtn>
-        </NumBtnsDiv>
+        <ButtonGroup />
         <SubmitDiv>
           <SubmitButton type="submit">SUBMIT</SubmitButton>
         </SubmitDiv>
