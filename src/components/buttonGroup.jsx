@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 
+import AppContext from "../context/AppContext";
+
 const ButtonGroup = ({ buttons }) => {
-  const [clickedId, setClickedId] = useState(-1);
+  const {clickedIdContext, setClickedIdContext} =useContext(AppContext)
 
   const NumBtnsDiv = styled.div`
     display: flex;
@@ -10,7 +12,7 @@ const ButtonGroup = ({ buttons }) => {
   `;
   const NumBtn = styled.button`
   color: hsl(0, 0%, 100%);
-    background-color: ${(props) => (props.background ? "hsl(217, 12%, 63%)" : 'hsl(213, 19%, 18%)')};
+    background-color: ${(props) => (props.active ? "hsl(217, 12%, 63%)" : 'hsl(213, 19%, 18%)')};
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -28,8 +30,8 @@ const ButtonGroup = ({ buttons }) => {
           <NumBtn
             key={i}
             name={buttonLabel}
-            onClick={() => setClickedId(i)}
-            background={i === clickedId ? true : false}
+            onClick={() => setClickedIdContext(i)}
+            active={i === clickedIdContext ? true : false}
           >
             {buttonLabel}
           </NumBtn>
