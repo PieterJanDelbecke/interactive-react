@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import AppContext from "./context/AppContext";
-import Page from "./components/page";
+import RatingCard from "./components/ratingCard";
+import ThankYouCard from "./components/thankYouCard";
 
 function App() {
   const [context, setContext] = useState({
@@ -14,7 +15,8 @@ function App() {
       <AppContext.Provider value={{ context, setContext }}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Page />} />
+            <Route path="/" element={<RatingCard />} />
+            <Route path="/thank_you" element={<ThankYouCard />} />
           </Routes>
         </BrowserRouter>
       </AppContext.Provider>
