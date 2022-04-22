@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import ButtonGroup from "./buttonGroup";
 import SvgStar from "./SvgStarComponent";
+import AppContext from "../context/AppContext";
+import { useContext } from "react";
 
 const MainDiv = styled.div`
   display: flex;
@@ -45,11 +47,15 @@ const SubmitButton = styled.button`
 
 const RatingCard = () => {
   const navigate = useNavigate();
+  const { context } = useContext(AppContext)
+  
+  let unSelected = (context.activeBtn === -1 ? true : false)
 
   const handleSubmit = () => {
     console.log("SUBMITTED");
     navigate("/thank_you");
   };
+  
 
   return (
     <>
@@ -63,7 +69,7 @@ const RatingCard = () => {
           </Text>
           <ButtonGroup buttons={["1", "2", "3", "4", "5"]} />
           <SubmitDiv>
-            <SubmitButton onClick={handleSubmit}>SUBMIT</SubmitButton>
+            <SubmitButton onClick={handleSubmit} disabled={unSelected}>SUBMIT</SubmitButton>
           </SubmitDiv>
         </Container>
       </MainDiv>
