@@ -2,6 +2,7 @@ import { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 import { useNavigate } from "react-router-dom";
+import SvgStar from "./starSvgComponent";
 
 const ThankYouCard = () => {
   const { context } = useContext(AppContext);
@@ -15,6 +16,7 @@ const ThankYouCard = () => {
 
   return (
     <>
+      <SvgStar />
       <p>You selected {score} out of 5</p>
       <h1>Thank you</h1>
       <p>

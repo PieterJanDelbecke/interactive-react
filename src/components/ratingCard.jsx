@@ -1,8 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 import ButtonGroup from "./buttonGroup";
+import SvgStar from "./starSvgComponent";
 
 const MainDiv = styled.div`
   display: flex;
@@ -55,6 +56,7 @@ const RatingCard = () => {
     <>
       <MainDiv>
         <Container>
+          <SvgStar />
           <Title>How did we do?</Title>
           <Text>
             Please let is know how we did with your support request. All
