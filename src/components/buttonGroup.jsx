@@ -8,7 +8,7 @@ const ButtonGroup = ({ buttons }) => {
 
   const NumBtnsDiv = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   `;
   const NumBtn = styled.button`
   color: hsl(0, 0%, 100%);

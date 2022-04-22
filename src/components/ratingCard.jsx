@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 import ButtonGroup from "./buttonGroup";
-import SvgStar from "./starSvgComponent";
+import SvgStar from "./SvgStarComponent";
 
 const MainDiv = styled.div`
   display: flex;
@@ -12,7 +12,6 @@ const MainDiv = styled.div`
 
 const Container = styled.div`
   background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
-  border: 1px solid red;
   width: 360px;
   margin: 50px 0px;
   padding: 20px;
@@ -22,7 +21,7 @@ const Title = styled.h2`
 `;
 const Text = styled.p`
   font-size: 15px;
-  color: white;
+  color: hsl(216, 12%, 54%);
 `;
 
 const SubmitDiv = styled.div`
@@ -32,10 +31,10 @@ const SubmitDiv = styled.div`
 const SubmitButton = styled.button`
   color: white;
   border-style: none;
-  margin: 25px;
+  margin: 25px 0px;
   background-color: hsl(25, 97%, 53%);
   height: 40px;
-  width: 90%;
+  width: 100%;
   border-radius: 18px;
   :hover {
     transition: 0.25s;
@@ -59,8 +58,8 @@ const RatingCard = () => {
           <SvgStar />
           <Title>How did we do?</Title>
           <Text>
-            Please let is know how we did with your support request. All
-            feedback is appreciated to help us improve our affering!
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
           </Text>
           <ButtonGroup buttons={["1", "2", "3", "4", "5"]} />
           <SubmitDiv>
